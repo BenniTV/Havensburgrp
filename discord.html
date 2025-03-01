@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord - Havensburg RP</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- Discord Widget -->
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+        new Crate({
+            server: '1339876425536241684',
+            channel: '1341886485867266108'
+        })
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-[var(--primary-color)] text-white" x-data="{ isOpen: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <a href="index.html" class="text-xl font-bold">Havensburg RP</a>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="index.html" class="nav-link">Startseite</a>
+                            <a href="discord.html" class="nav-link">Discord</a>
+                            <a href="index.html#regeln" class="nav-link">Regeln</a>
+                            <a href="index.html#team" class="nav-link">Team</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button @click="isOpen = !isOpen" class="inline-flex items-center justify-center p-2 rounded-md hover:bg-[var(--secondary-color)]">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="md:hidden" x-show="isOpen">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="index.html" class="mobile-nav-link">Startseite</a>
+                    <a href="discord.html" class="mobile-nav-link">Discord</a>
+                    <a href="index.html#regeln" class="mobile-nav-link">Regeln</a>
+                    <a href="index.html#team" class="mobile-nav-link">Team</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Discord Header -->
+        <div class="bg-[var(--primary-color)] text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl font-bold sm:text-5xl md:text-6xl">
+                    Discord Community
+                </h1>
+                <p class="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
+                    Tritt unserer aktiven Discord-Community bei und werde Teil von Havensburg RP
+                </p>
+                <div class="mt-8">
+                    <a href="https://discord.gg/xekg8yNHFR" 
+                       class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-[var(--primary-color)] bg-white hover:bg-gray-100">
+                        <i class="fab fa-discord mr-2"></i>
+                        Jetzt beitreten
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Discord Features -->
+        <div class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Discord Widget -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-[var(--primary-color)] mb-6">Live Community</h2>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <iframe src="https://discord.com/widget?id=1339876425536241684&theme=dark" 
+                                    width="100%" 
+                                    height="500" 
+                                    allowtransparency="true" 
+                                    frameborder="0" 
+                                    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Discord Features List -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-[var(--primary-color)] mb-6">Was dich erwartet</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-users text-2xl text-[var(--primary-color)]"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-gray-900">Aktive Community</h3>
+                                    <p class="mt-1 text-gray-600">Treffe andere Spieler und tausche dich aus</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-bell text-2xl text-[var(--primary-color)]"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-gray-900">News & Updates</h3>
+                                    <p class="mt-1 text-gray-600">Bleibe über alle Neuigkeiten informiert</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-headset text-2xl text-[var(--primary-color)]"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-gray-900">Support</h3>
+                                    <p class="mt-1 text-gray-600">Direkter Kontakt zum Support-Team</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-calendar text-2xl text-[var(--primary-color)]"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-gray-900">Events</h3>
+                                    <p class="mt-1 text-gray-600">Regelmäßige Community-Events und Aktivitäten</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[var(--primary-color)] text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="footer-title">Havensburg RP</h3>
+                    <p class="text-gray-300">
+                        Deine neue Heimat für qualitatives Roleplay.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="footer-title">Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="footer-link">Startseite</a></li>
+                        <li><a href="index.html#regeln" class="footer-link">Regeln</a></li>
+                        <li><a href="index.html#team" class="footer-link">Team</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title">Kontakt</h3>
+                    <ul class="footer-contact-item">
+                        <li><i class="fab fa-discord mr-2"></i> Discord</li>
+                        <li><i class="fas fa-envelope mr-2"></i> E-Mail</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                <p class="text-gray-300">© 2024 Havensburg RP. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
