@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap');
+
+:root {
+    --primary-color: #2B3A67;
+    --secondary-color: #496A81;
+    --accent-color: #66999B;
+    --text-color: #2C3639;
+    --background-color: #F5F5F5;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Navigation Styles */
+.nav-link {
+    @apply px-3 py-2 rounded-md text-sm font-medium hover:bg-[var(--secondary-color)];
+}
+
+.mobile-nav-link {
+    @apply block px-3 py-2 rounded-md text-base font-medium hover:bg-[var(--secondary-color)];
+}
+
+/* Hero Section Styles */
+.hero-section {
+    @apply relative bg-cover bg-center h-[80vh];
+}
+
+.hero-overlay {
+    @apply absolute inset-0 bg-black bg-opacity-50;
+}
+
+/* Feature Card Styles */
+.feature-icon {
+    @apply flex items-center justify-center h-12 w-12 rounded-md bg-[var(--primary-color)] text-white;
+}
+
+.feature-title {
+    @apply mt-6 text-lg font-medium text-[var(--text-color)];
+}
+
+.feature-description {
+    @apply mt-2 text-base text-gray-600 text-center;
+}
+
+/* Footer Styles */
+.footer-title {
+    @apply text-xl font-bold mb-4;
+}
+
+.footer-link {
+    @apply hover:text-gray-300;
+}
+
+.footer-contact-item {
+    @apply space-y-2;
+} 

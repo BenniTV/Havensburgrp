@@ -15,25 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Custom Styles -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap');
-        
-        :root {
-            --primary-color: #2B3A67;
-            --secondary-color: #496A81;
-            --accent-color: #66999B;
-            --text-color: #2C3639;
-            --background-color: #F5F5F5;
-        }
-        
-        body {
-            font-family: 'Source Sans Pro', sans-serif;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -46,11 +28,11 @@
                     </div>
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
-                            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-[var(--secondary-color)]">Startseite</a>
-                            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-[var(--secondary-color)]">Über uns</a>
-                            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-[var(--secondary-color)]">Whitelist</a>
-                            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-[var(--secondary-color)]">Community</a>
-                            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-[var(--secondary-color)]">Guides</a>
+                            <a href="index.html" class="nav-link">Startseite</a>
+                            <a href="about.html" class="nav-link">Über uns</a>
+                            <a href="whitelist.html" class="nav-link">Whitelist</a>
+                            <a href="community.html" class="nav-link">Community</a>
+                            <a href="guides.html" class="nav-link">Guides</a>
                         </div>
                     </div>
                 </div>
@@ -66,19 +48,19 @@
             <!-- Mobile menu -->
             <div class="md:hidden" x-show="isOpen">
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-[var(--secondary-color)]">Startseite</a>
-                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-[var(--secondary-color)]">Über uns</a>
-                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-[var(--secondary-color)]">Whitelist</a>
-                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-[var(--secondary-color)]">Community</a>
-                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-[var(--secondary-color)]">Guides</a>
+                    <a href="index.html" class="mobile-nav-link">Startseite</a>
+                    <a href="about.html" class="mobile-nav-link">Über uns</a>
+                    <a href="whitelist.html" class="mobile-nav-link">Whitelist</a>
+                    <a href="community.html" class="mobile-nav-link">Community</a>
+                    <a href="guides.html" class="mobile-nav-link">Guides</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <div class="relative bg-cover bg-center h-[80vh]" style="background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="hero-section" style="background-image: url('assets/images/hero-bg.jpg');">
+        <div class="hero-overlay"></div>
         <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
             <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
                 Willkommen in Havensburg
@@ -87,10 +69,10 @@
                 Tauche ein in eine lebendige Rollenspiel-Gemeinschaft. Erlebe einzigartige Geschichten in unserer deutschen Stadt.
             </p>
             <div class="mt-10">
-                <a href="#" class="inline-block bg-white px-8 py-3 text-base font-medium text-[var(--primary-color)] hover:bg-gray-100 rounded-md">
+                <a href="whitelist.html" class="inline-block bg-white px-8 py-3 text-base font-medium text-[var(--primary-color)] hover:bg-gray-100 rounded-md">
                     Jetzt bewerben
                 </a>
-                <a href="#" class="ml-4 inline-block px-8 py-3 text-base font-medium text-white border border-white hover:bg-white hover:text-[var(--primary-color)] rounded-md">
+                <a href="about.html" class="ml-4 inline-block px-8 py-3 text-base font-medium text-white border border-white hover:bg-white hover:text-[var(--primary-color)] rounded-md">
                     Mehr erfahren
                 </a>
             </div>
@@ -113,33 +95,33 @@
                 <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
                     <!-- Feature 1 -->
                     <div class="flex flex-col items-center">
-                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-[var(--primary-color)] text-white">
+                        <div class="feature-icon">
                             <i class="fas fa-users"></i>
                         </div>
-                        <h3 class="mt-6 text-lg font-medium text-[var(--text-color)]">Aktive Community</h3>
-                        <p class="mt-2 text-base text-gray-600 text-center">
+                        <h3 class="feature-title">Aktive Community</h3>
+                        <p class="feature-description">
                             Eine freundliche und hilfsbereite Gemeinschaft, die dich willkommen heißt.
                         </p>
                     </div>
 
                     <!-- Feature 2 -->
                     <div class="flex flex-col items-center">
-                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-[var(--primary-color)] text-white">
+                        <div class="feature-icon">
                             <i class="fas fa-book"></i>
                         </div>
-                        <h3 class="mt-6 text-lg font-medium text-[var(--text-color)]">Tiefgründiges RP</h3>
-                        <p class="mt-2 text-base text-gray-600 text-center">
+                        <h3 class="feature-title">Tiefgründiges RP</h3>
+                        <p class="feature-description">
                             Erschaffe deine eigene Geschichte in einer lebendigen Welt.
                         </p>
                     </div>
 
                     <!-- Feature 3 -->
                     <div class="flex flex-col items-center">
-                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-[var(--primary-color)] text-white">
+                        <div class="feature-icon">
                             <i class="fas fa-cog"></i>
                         </div>
-                        <h3 class="mt-6 text-lg font-medium text-[var(--text-color)]">Eigene Systeme</h3>
-                        <p class="mt-2 text-base text-gray-600 text-center">
+                        <h3 class="feature-title">Eigene Systeme</h3>
+                        <p class="feature-description">
                             Einzigartige Features und Mechaniken für das beste Spielerlebnis.
                         </p>
                     </div>
@@ -153,22 +135,22 @@
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Havensburg RP</h3>
+                    <h3 class="footer-title">Havensburg RP</h3>
                     <p class="text-gray-300">
                         Deine neue Heimat für qualitatives Roleplay.
                     </p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Links</h3>
+                    <h3 class="footer-title">Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-gray-300">Discord</a></li>
-                        <li><a href="#" class="hover:text-gray-300">Forum</a></li>
-                        <li><a href="#" class="hover:text-gray-300">Regelwerk</a></li>
+                        <li><a href="#" class="footer-link">Discord</a></li>
+                        <li><a href="#" class="footer-link">Forum</a></li>
+                        <li><a href="#" class="footer-link">Regelwerk</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Kontakt</h3>
-                    <ul class="space-y-2">
+                    <h3 class="footer-title">Kontakt</h3>
+                    <ul class="footer-contact-item">
                         <li><i class="fab fa-discord mr-2"></i> Discord</li>
                         <li><i class="fas fa-envelope mr-2"></i> E-Mail</li>
                     </ul>
