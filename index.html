@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Havensburg RP - Willkommen in unserer Stadt</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap');
+        
+        :root {
+            --primary-color: #2B3A67;
+            --secondary-color: #496A81;
+            --accent-color: #66999B;
+            --text-color: #2C3639;
+            --background-color: #F5F5F5;
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-[var(--primary-color)] text-white" x-data="{ isOpen: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <span class="text-xl font-bold">Havensburg RP</span>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-[var(--secondary-color)]">Startseite</a>
+                            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-[var(--secondary-color)]">Über uns</a>
+                            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-[var(--secondary-color)]">Whitelist</a>
+                            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-[var(--secondary-color)]">Community</a>
+                            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-[var(--secondary-color)]">Guides</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button @click="isOpen = !isOpen" class="inline-flex items-center justify-center p-2 rounded-md hover:bg-[var(--secondary-color)]">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="md:hidden" x-show="isOpen">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-[var(--secondary-color)]">Startseite</a>
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-[var(--secondary-color)]">Über uns</a>
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-[var(--secondary-color)]">Whitelist</a>
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-[var(--secondary-color)]">Community</a>
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-[var(--secondary-color)]">Guides</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-cover bg-center h-[80vh]" style="background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
+                Willkommen in Havensburg
+            </h1>
+            <p class="mt-6 max-w-3xl text-xl text-gray-300">
+                Tauche ein in eine lebendige Rollenspiel-Gemeinschaft. Erlebe einzigartige Geschichten in unserer deutschen Stadt.
+            </p>
+            <div class="mt-10">
+                <a href="#" class="inline-block bg-white px-8 py-3 text-base font-medium text-[var(--primary-color)] hover:bg-gray-100 rounded-md">
+                    Jetzt bewerben
+                </a>
+                <a href="#" class="ml-4 inline-block px-8 py-3 text-base font-medium text-white border border-white hover:bg-white hover:text-[var(--primary-color)] rounded-md">
+                    Mehr erfahren
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-[var(--primary-color)]">
+                    Warum Havensburg RP?
+                </h2>
+                <p class="mt-4 text-xl text-gray-600">
+                    Entdecke eine einzigartige Rollenspiel-Erfahrung
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Feature 1 -->
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-[var(--primary-color)] text-white">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="mt-6 text-lg font-medium text-[var(--text-color)]">Aktive Community</h3>
+                        <p class="mt-2 text-base text-gray-600 text-center">
+                            Eine freundliche und hilfsbereite Gemeinschaft, die dich willkommen heißt.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-[var(--primary-color)] text-white">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3 class="mt-6 text-lg font-medium text-[var(--text-color)]">Tiefgründiges RP</h3>
+                        <p class="mt-2 text-base text-gray-600 text-center">
+                            Erschaffe deine eigene Geschichte in einer lebendigen Welt.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-[var(--primary-color)] text-white">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <h3 class="mt-6 text-lg font-medium text-[var(--text-color)]">Eigene Systeme</h3>
+                        <p class="mt-2 text-base text-gray-600 text-center">
+                            Einzigartige Features und Mechaniken für das beste Spielerlebnis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[var(--primary-color)] text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Havensburg RP</h3>
+                    <p class="text-gray-300">
+                        Deine neue Heimat für qualitatives Roleplay.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-300">Discord</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Forum</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Regelwerk</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Kontakt</h3>
+                    <ul class="space-y-2">
+                        <li><i class="fab fa-discord mr-2"></i> Discord</li>
+                        <li><i class="fas fa-envelope mr-2"></i> E-Mail</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                <p class="text-gray-300">© 2024 Havensburg RP. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
