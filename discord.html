@@ -38,7 +38,7 @@
                         <div class="ml-10 flex items-baseline space-x-4">
                             <a href="index.html" class="nav-link">Startseite</a>
                             <a href="discord.html" class="nav-link">Discord</a>
-                            <a href="index.html#regeln" class="nav-link">Regeln</a>
+                            <a href="rules.html" class="nav-link">Regeln</a>
                             <a href="index.html#team" class="nav-link">Team</a>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                     <a href="index.html" class="mobile-nav-link">Startseite</a>
                     <a href="discord.html" class="mobile-nav-link">Discord</a>
-                    <a href="index.html#regeln" class="mobile-nav-link">Regeln</a>
+                    <a href="rules.html" class="mobile-nav-link">Regeln</a>
                     <a href="index.html#team" class="mobile-nav-link">Team</a>
                 </div>
             </div>
@@ -88,65 +88,37 @@
         <!-- Discord Features -->
         <div class="py-16 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <!-- Discord Widget -->
-                    <div>
-                        <h2 class="text-2xl font-bold text-[var(--primary-color)] mb-6">Live Community</h2>
-                        <div class="bg-gray-50 rounded-lg p-4">
-                            <iframe src="https://discord.com/widget?id=1339876425536241684&theme=dark" 
-                                    width="100%" 
-                                    height="500" 
-                                    allowtransparency="true" 
-                                    frameborder="0" 
-                                    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
-                            </iframe>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-gray-50 rounded-lg p-6 text-center">
+                        <div class="text-3xl text-[var(--primary-color)] mb-4">
+                            <i class="fas fa-users"></i>
                         </div>
+                        <h3 class="text-lg font-medium text-gray-900">Aktive Community</h3>
+                        <p class="mt-2 text-gray-600">Treffe andere Spieler und tausche dich aus</p>
                     </div>
 
-                    <!-- Discord Features List -->
-                    <div>
-                        <h2 class="text-2xl font-bold text-[var(--primary-color)] mb-6">Was dich erwartet</h2>
-                        <div class="space-y-6">
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0">
-                                    <i class="fas fa-users text-2xl text-[var(--primary-color)]"></i>
-                                </div>
-                                <div class="ml-4">
-                                    <h3 class="text-lg font-medium text-gray-900">Aktive Community</h3>
-                                    <p class="mt-1 text-gray-600">Treffe andere Spieler und tausche dich aus</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0">
-                                    <i class="fas fa-bell text-2xl text-[var(--primary-color)]"></i>
-                                </div>
-                                <div class="ml-4">
-                                    <h3 class="text-lg font-medium text-gray-900">News & Updates</h3>
-                                    <p class="mt-1 text-gray-600">Bleibe über alle Neuigkeiten informiert</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0">
-                                    <i class="fas fa-headset text-2xl text-[var(--primary-color)]"></i>
-                                </div>
-                                <div class="ml-4">
-                                    <h3 class="text-lg font-medium text-gray-900">Support</h3>
-                                    <p class="mt-1 text-gray-600">Direkter Kontakt zum Support-Team</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0">
-                                    <i class="fas fa-calendar text-2xl text-[var(--primary-color)]"></i>
-                                </div>
-                                <div class="ml-4">
-                                    <h3 class="text-lg font-medium text-gray-900">Events</h3>
-                                    <p class="mt-1 text-gray-600">Regelmäßige Community-Events und Aktivitäten</p>
-                                </div>
-                            </div>
+                    <div class="bg-gray-50 rounded-lg p-6 text-center">
+                        <div class="text-3xl text-[var(--primary-color)] mb-4">
+                            <i class="fas fa-bell"></i>
                         </div>
+                        <h3 class="text-lg font-medium text-gray-900">News & Updates</h3>
+                        <p class="mt-2 text-gray-600">Bleibe über alle Neuigkeiten informiert</p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-lg p-6 text-center">
+                        <div class="text-3xl text-[var(--primary-color)] mb-4">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900">Support</h3>
+                        <p class="mt-2 text-gray-600">Direkter Kontakt zum Support-Team</p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-lg p-6 text-center">
+                        <div class="text-3xl text-[var(--primary-color)] mb-4">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900">Events</h3>
+                        <p class="mt-2 text-gray-600">Regelmäßige Community-Events und Aktivitäten</p>
                     </div>
                 </div>
             </div>
@@ -167,7 +139,7 @@
                     <h3 class="footer-title">Links</h3>
                     <ul class="space-y-2">
                         <li><a href="index.html" class="footer-link">Startseite</a></li>
-                        <li><a href="index.html#regeln" class="footer-link">Regeln</a></li>
+                        <li><a href="rules.html" class="footer-link">Regeln</a></li>
                         <li><a href="index.html#team" class="footer-link">Team</a></li>
                     </ul>
                 </div>

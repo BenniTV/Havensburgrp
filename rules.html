@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regeln - Havensburg RP</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-[var(--primary-color)] text-white" x-data="{ isOpen: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <a href="index.html" class="text-xl font-bold">Havensburg RP</a>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="index.html" class="nav-link">Startseite</a>
+                            <a href="discord.html" class="nav-link">Discord</a>
+                            <a href="rules.html" class="nav-link">Regeln</a>
+                            <a href="index.html#team" class="nav-link">Team</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button @click="isOpen = !isOpen" class="inline-flex items-center justify-center p-2 rounded-md hover:bg-[var(--secondary-color)]">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="md:hidden" x-show="isOpen">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="index.html" class="mobile-nav-link">Startseite</a>
+                    <a href="discord.html" class="mobile-nav-link">Discord</a>
+                    <a href="rules.html" class="mobile-nav-link">Regeln</a>
+                    <a href="index.html#team" class="mobile-nav-link">Team</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Header Section -->
+        <div class="bg-[var(--primary-color)] text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl font-bold sm:text-5xl md:text-6xl">
+                    Regelwerk
+                </h1>
+                <p class="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
+                    Alle wichtigen Regeln und Richtlinien für ein faires Miteinander
+                </p>
+            </div>
+        </div>
+
+        <!-- Rules Tabs -->
+        <div class="py-16" x-data="{ activeTab: 'allgemein' }">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Tab Navigation -->
+                <div class="border-b border-gray-200">
+                    <nav class="-mb-px flex space-x-8">
+                        <button @click="activeTab = 'allgemein'"
+                                :class="{ 'border-[var(--primary-color)] text-[var(--primary-color)]': activeTab === 'allgemein',
+                                        'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300': activeTab !== 'allgemein' }"
+                                class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                            Allgemeine Regeln
+                        </button>
+                        <button @click="activeTab = 'rp'"
+                                :class="{ 'border-[var(--primary-color)] text-[var(--primary-color)]': activeTab === 'rp',
+                                        'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300': activeTab !== 'rp' }"
+                                class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                            Roleplay Regeln
+                        </button>
+                        <button @click="activeTab = 'fraktionen'"
+                                :class="{ 'border-[var(--primary-color)] text-[var(--primary-color)]': activeTab === 'fraktionen',
+                                        'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300': activeTab !== 'fraktionen' }"
+                                class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                            Fraktionsregeln
+                        </button>
+                    </nav>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="mt-8">
+                    <!-- Allgemeine Regeln -->
+                    <div x-show="activeTab === 'allgemein'" class="space-y-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h2 class="text-2xl font-bold text-[var(--primary-color)] mb-4">
+                                <i class="fas fa-book mr-2"></i>Allgemeine Regeln
+                            </h2>
+                            <div class="prose max-w-none">
+                                <p class="text-gray-600 mb-4">
+                                    Die allgemeinen Regeln findest du in unserem ausführlichen Google Docs Dokument:
+                                </p>
+                                <a href="LINK_ZUM_ERSTEN_DOKUMENT" target="_blank" 
+                                   class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[var(--primary-color)] hover:bg-[var(--secondary-color)]">
+                                    <i class="fas fa-external-link-alt mr-2"></i>
+                                    Zu den allgemeinen Regeln
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Roleplay Regeln -->
+                    <div x-show="activeTab === 'rp'" class="space-y-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h2 class="text-2xl font-bold text-[var(--primary-color)] mb-4">
+                                <i class="fas fa-theater-masks mr-2"></i>Roleplay Regeln
+                            </h2>
+                            <div class="prose max-w-none">
+                                <p class="text-gray-600 mb-4">
+                                    Die speziellen Roleplay-Regeln findest du in diesem Dokument:
+                                </p>
+                                <a href="LINK_ZUM_ZWEITEN_DOKUMENT" target="_blank"
+                                   class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[var(--primary-color)] hover:bg-[var(--secondary-color)]">
+                                    <i class="fas fa-external-link-alt mr-2"></i>
+                                    Zu den Roleplay-Regeln
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fraktionsregeln -->
+                    <div x-show="activeTab === 'fraktionen'" class="space-y-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h2 class="text-2xl font-bold text-[var(--primary-color)] mb-4">
+                                <i class="fas fa-users mr-2"></i>Fraktionsregeln
+                            </h2>
+                            <div class="prose max-w-none">
+                                <p class="text-gray-600 mb-4">
+                                    Die Regeln für Fraktionen findest du in diesem Dokument:
+                                </p>
+                                <a href="LINK_ZUM_DRITTEN_DOKUMENT" target="_blank"
+                                   class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[var(--primary-color)] hover:bg-[var(--secondary-color)]">
+                                    <i class="fas fa-external-link-alt mr-2"></i>
+                                    Zu den Fraktionsregeln
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[var(--primary-color)] text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="footer-title">Havensburg RP</h3>
+                    <p class="text-gray-300">
+                        Deine neue Heimat für qualitatives Roleplay.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="footer-title">Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="footer-link">Startseite</a></li>
+                        <li><a href="discord.html" class="footer-link">Discord</a></li>
+                        <li><a href="index.html#team" class="footer-link">Team</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title">Kontakt</h3>
+                    <ul class="footer-contact-item">
+                        <li><i class="fab fa-discord mr-2"></i> Discord</li>
+                        <li><i class="fas fa-envelope mr-2"></i> E-Mail</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                <p class="text-gray-300">© 2024 Havensburg RP. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
