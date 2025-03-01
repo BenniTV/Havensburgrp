@@ -16,6 +16,14 @@
     
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles/main.css">
+
+    <!-- Discord Widget -->
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+        new Crate({
+            server: 'DEIN_SERVER_ID', // Hier muss Ihre Discord-Server-ID eingetragen werden
+            channel: 'DEIN_CHANNEL_ID' // Hier muss Ihre Channel-ID eingetragen werden
+        })
+    </script>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -28,11 +36,10 @@
                     </div>
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
-                            <a href="index.html" class="nav-link">Startseite</a>
-                            <a href="about.html" class="nav-link">Über uns</a>
-                            <a href="whitelist.html" class="nav-link">Whitelist</a>
-                            <a href="community.html" class="nav-link">Community</a>
-                            <a href="guides.html" class="nav-link">Guides</a>
+                            <a href="#" class="nav-link">Startseite</a>
+                            <a href="#discord" class="nav-link">Discord</a>
+                            <a href="#regeln" class="nav-link">Regeln</a>
+                            <a href="#team" class="nav-link">Team</a>
                         </div>
                     </div>
                 </div>
@@ -48,87 +55,124 @@
             <!-- Mobile menu -->
             <div class="md:hidden" x-show="isOpen">
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="index.html" class="mobile-nav-link">Startseite</a>
-                    <a href="about.html" class="mobile-nav-link">Über uns</a>
-                    <a href="whitelist.html" class="mobile-nav-link">Whitelist</a>
-                    <a href="community.html" class="mobile-nav-link">Community</a>
-                    <a href="guides.html" class="mobile-nav-link">Guides</a>
+                    <a href="#" class="mobile-nav-link">Startseite</a>
+                    <a href="#discord" class="mobile-nav-link">Discord</a>
+                    <a href="#regeln" class="mobile-nav-link">Regeln</a>
+                    <a href="#team" class="mobile-nav-link">Team</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="hero-section" style="background-image: url('assets/images/hero-bg.jpg');">
-        <div class="hero-overlay"></div>
-        <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
-            <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-                Willkommen in Havensburg
-            </h1>
-            <p class="mt-6 max-w-3xl text-xl text-gray-300">
-                Tauche ein in eine lebendige Rollenspiel-Gemeinschaft. Erlebe einzigartige Geschichten in unserer deutschen Stadt.
-            </p>
-            <div class="mt-10">
-                <a href="whitelist.html" class="inline-block bg-white px-8 py-3 text-base font-medium text-[var(--primary-color)] hover:bg-gray-100 rounded-md">
-                    Jetzt bewerben
-                </a>
-                <a href="about.html" class="ml-4 inline-block px-8 py-3 text-base font-medium text-white border border-white hover:bg-white hover:text-[var(--primary-color)] rounded-md">
-                    Mehr erfahren
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Features Section -->
-    <div class="py-12 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h2 class="text-3xl font-bold text-[var(--primary-color)]">
-                    Warum Havensburg RP?
-                </h2>
-                <p class="mt-4 text-xl text-gray-600">
-                    Entdecke eine einzigartige Rollenspiel-Erfahrung
+    <!-- Main Content -->
+    <main>
+        <!-- Welcome Section -->
+        <div class="bg-[var(--primary-color)] text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl font-bold sm:text-5xl md:text-6xl">
+                    Willkommen in Havensburg
+                </h1>
+                <p class="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
+                    Tauche ein in eine lebendige Rollenspiel-Gemeinschaft. Erlebe einzigartige Geschichten in unserer deutschen Stadt.
                 </p>
             </div>
+        </div>
 
-            <div class="mt-10">
-                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-                    <!-- Feature 1 -->
-                    <div class="flex flex-col items-center">
-                        <div class="feature-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3 class="feature-title">Aktive Community</h3>
-                        <p class="feature-description">
-                            Eine freundliche und hilfsbereite Gemeinschaft, die dich willkommen heißt.
-                        </p>
+        <!-- Discord Section -->
+        <div id="discord" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-[var(--primary-color)]">
+                        Tritt unserer Community bei
+                    </h2>
+                    <p class="mt-4 text-xl text-gray-600">
+                        Verbinde dich mit anderen Spielern und bleibe auf dem Laufenden
+                    </p>
+                </div>
+
+                <!-- Discord Widget -->
+                <div class="flex justify-center">
+                    <iframe src="https://discord.com/widget?id=DEIN_SERVER_ID&theme=dark" 
+                            width="350" 
+                            height="500" 
+                            allowtransparency="true" 
+                            frameborder="0" 
+                            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+                    </iframe>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <a href="https://discord.gg/DEIN_INVITE_LINK" 
+                       class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[var(--primary-color)] hover:bg-[var(--secondary-color)]">
+                        <i class="fab fa-discord mr-2"></i>
+                        Discord beitreten
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rules Preview -->
+        <div id="regeln" class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-[var(--primary-color)]">Unsere Regeln</h2>
+                    <p class="mt-4 text-xl text-gray-600">
+                        Die wichtigsten Grundregeln für ein faires Miteinander
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-[var(--primary-color)] mb-4">
+                            <i class="fas fa-check-circle mr-2"></i>Grundregeln
+                        </h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li><i class="fas fa-angle-right mr-2"></i>Respektvoller Umgang</li>
+                            <li><i class="fas fa-angle-right mr-2"></i>Kein Metagaming</li>
+                            <li><i class="fas fa-angle-right mr-2"></i>Kein Powergaming</li>
+                            <li><i class="fas fa-angle-right mr-2"></i>Realistische Spielweise</li>
+                        </ul>
                     </div>
 
-                    <!-- Feature 2 -->
-                    <div class="flex flex-col items-center">
-                        <div class="feature-icon">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <h3 class="feature-title">Tiefgründiges RP</h3>
-                        <p class="feature-description">
-                            Erschaffe deine eigene Geschichte in einer lebendigen Welt.
-                        </p>
-                    </div>
-
-                    <!-- Feature 3 -->
-                    <div class="flex flex-col items-center">
-                        <div class="feature-icon">
-                            <i class="fas fa-cog"></i>
-                        </div>
-                        <h3 class="feature-title">Eigene Systeme</h3>
-                        <p class="feature-description">
-                            Einzigartige Features und Mechaniken für das beste Spielerlebnis.
-                        </p>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-[var(--primary-color)] mb-4">
+                            <i class="fas fa-exclamation-triangle mr-2"></i>Wichtige Hinweise
+                        </h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li><i class="fas fa-angle-right mr-2"></i>Value of Life beachten</li>
+                            <li><i class="fas fa-angle-right mr-2"></i>New Life Rule</li>
+                            <li><i class="fas fa-angle-right mr-2"></i>RDM/VDM verboten</li>
+                            <li><i class="fas fa-angle-right mr-2"></i>Charakterbindung erforderlich</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+
+        <!-- Team Section -->
+        <div id="team" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-[var(--primary-color)]">Unser Team</h2>
+                    <p class="mt-4 text-xl text-gray-600">
+                        Die Menschen hinter Havensburg RP
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Team Member Card Template -->
+                    <div class="bg-gray-50 rounded-lg p-6 text-center">
+                        <div class="text-4xl text-[var(--primary-color)] mb-4">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[var(--primary-color)]">Projektleitung</h3>
+                        <p class="mt-2 text-gray-600">Discord: @username</p>
+                    </div>
+                    <!-- Weitere Team-Mitglieder hier hinzufügen -->
+                </div>
+            </div>
+        </div>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-[var(--primary-color)] text-white">
@@ -143,9 +187,9 @@
                 <div>
                     <h3 class="footer-title">Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="footer-link">Discord</a></li>
-                        <li><a href="#" class="footer-link">Forum</a></li>
-                        <li><a href="#" class="footer-link">Regelwerk</a></li>
+                        <li><a href="#discord" class="footer-link">Discord</a></li>
+                        <li><a href="#regeln" class="footer-link">Regeln</a></li>
+                        <li><a href="#team" class="footer-link">Team</a></li>
                     </ul>
                 </div>
                 <div>
